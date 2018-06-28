@@ -11,7 +11,7 @@ export class TasksService {
   
    }
    register(regform){
-     console.log(regform)
+    //  console.log(regform)
      return this._http.post('/register', regform)
    }
    login(logform){

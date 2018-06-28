@@ -24,7 +24,8 @@ module.exports = {
                             if (err) {
                                 res.json({ Status: false, Error: err })
                             } else {
-                                req.session.id = user._id
+                                req.session.user = { id: user._id }
+                                console.log("session", req.session.user)
                                 res.json({ Status: true, user: user, Login: true })
                             }
                         })
